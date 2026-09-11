@@ -46,7 +46,7 @@ if mode == "Text & Reasoning Analysis":
             with st.spinner("Analyzing with Gemini..."):
                 try:
                     response = client.models.generate_content(
-                        model="gemini-2.5-flash",
+                        model="gemini-3.6-flash",
                         contents=user_prompt
                     )
                     st.success("Analysis Complete")
@@ -67,7 +67,7 @@ elif mode == "Multimodal / Image Insight":
                 st.image(img, caption="Uploaded Image", use_container_width=True)
                 
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.6-flash",
                     contents=[img, image_prompt]
                 )
                 st.success("Visual Analysis Complete")
